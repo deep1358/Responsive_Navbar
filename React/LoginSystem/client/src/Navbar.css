@@ -1,0 +1,269 @@
+.navbar {
+  background-color: #39424e;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+}
+
+.navbarLogo {
+  margin-left: 5vw;
+  color: #b7c9cc;
+  overflow: hidden;
+}
+
+.navbarContent {
+  transform: translate(0, 0);
+}
+
+.navbarContent > ul {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.navbarContent > ul > li {
+  list-style: none;
+  cursor: pointer;
+  color: #b7c9cc;
+  margin: 5px;
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+.navbarContent > ul > li:hover {
+  border-bottom: 1px solid white;
+}
+
+.loginClose {
+  width: 100%;
+  text-align: right;
+}
+
+.close {
+  cursor: pointer;
+}
+
+.loginModal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: #39424e;
+  color: #b7c9cc;
+  font-family: "Rubik", sans-serif;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+    rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
+.loginModal:focus,
+.loginModal:active {
+  outline: none;
+}
+
+.loginHeader {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.loginForm {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.loginUsername,
+.loginEmail,
+.loginPassword {
+  display: flex;
+  flex-direction: column;
+  padding: 0.6rem;
+  margin: 5px;
+  font-weight: bolder;
+  font-size: 1.1rem;
+}
+
+.loginUsernameInput,
+.loginEmailInput,
+.loginPasswordInput {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #9a9a9a;
+  width: 300px;
+  margin: 10px;
+}
+
+.loginEmailInput > input,
+.loginPasswordInput > input,
+.loginUsernameInput > input {
+  background: none;
+  border: none;
+  flex: 1;
+  font-size: 1.1rem;
+  padding-left: 10px;
+  color: #b7c9cc;
+}
+
+::-webkit-input-placeholder {
+  font-size: 0.9rem;
+  color: #9a9a9a;
+}
+
+input:focus,
+input:active {
+  outline: none;
+  border: none;
+}
+
+.loginForgotPassword {
+  width: 100%;
+}
+
+.loginForgotPassword > a {
+  float: right;
+}
+
+a {
+  text-decoration: none;
+  color: #9a9a9a;
+}
+
+.loginButton {
+  padding: 0.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginButton > button {
+  padding: 0.7rem;
+  width: 60%;
+  cursor: pointer;
+  border-radius: 1rem;
+  border: none;
+  background-color: #b7c9cc;
+  color: #39424e;
+  font-weight: bolder;
+}
+
+.loginButton > button:focus,
+.loginButton > button:active {
+  outline: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s;
+  -webkit-text-fill-color: #b7c9cc !important;
+}
+
+.loginOptions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.loginWith {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.loginSocialIcons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.5rem;
+}
+
+.icons {
+  width: 50px;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.loginSignup {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 0.1rem;
+}
+.hamburger {
+  display: none;
+}
+
+.error {
+  color: red;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+@media only screen and (max-width: 650px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 10%;
+    top: 30%;
+    cursor: pointer;
+    color: #9a9a9a;
+  }
+
+  .navbarContent {
+    position: relative;
+    top: 49vh;
+    background-color: #39424e;
+    width: 80%;
+    height: 92vh;
+    transition: all 0.7s ease-in-out;
+    left: 80%;
+  }
+
+  .navbarContent > ul {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: auto;
+  }
+  .navbarContent > ul > li {
+    width: 90%;
+    text-align: center;
+  }
+  .navbarLogo {
+    margin-left: 5px;
+    width: 30%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .loginUsernameInput,
+  .loginEmailInput,
+  .loginPasswordInput {
+    width: 190px;
+  }
+  .loginEmailInput > input,
+  .loginPasswordInput > input,
+  .loginUsernameInput > input {
+    font-size: 0.7rem;
+  }
+}
